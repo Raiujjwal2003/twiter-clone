@@ -1,4 +1,8 @@
-const mongoose = require("mongoose");
+var express = require('express');
+var router = express.Router();
+const mongoose = require('mongoose');
+
+var plm = require('passport-local-mongoose');
 
 mongoose.connect("mongodb://localhost/twiter_user")
 .then(function(){
@@ -12,7 +16,8 @@ var userSchema = mongoose.Schema({
   password: String,
  
 })
-
+userSchema.plugin(plm)
+module.exports= mongoose.model("users",userSchema);
 
 // // const mongoose = require("mongoose");
 
@@ -71,7 +76,4 @@ var userSchema = mongoose.Schema({
 //   password: String,
 // });
 
-const UserModel = mongoose.model("User", userSchema);
 
-// Export the UserModel or other components as needed
-module.exports = UserModel;

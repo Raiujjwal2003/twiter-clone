@@ -1,8 +1,14 @@
 var express = require('express');
 var router = express.Router();
+const passport = require('passport');
 
 
 const userModel= require("./users")
+
+// This two line of code adding for passport js 
+const localStrategy = require('passport-local');
+passport.use(new localStrategy(userModel.authenticate()));
+
 /* GET home page. */
 router.get('/', function(req, res, next) {
   res.render('login', { title: 'Express' });
