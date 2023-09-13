@@ -60,4 +60,287 @@ a {
 
 a:hover {
   text-decoration: underline;
+  color: #fff;
+}
+
+
+
+
+/* Sidebar Styles */
+#sidebar {
+  width: 20vw;
+  background-color: #fff;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  overflow-y: auto;
+
+}
+
+.user-profile img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+}
+
+.user-profile h2 {
+  font-size: 1.2rem;
+  margin: 10px 0;
+}
+
+.user-profile p {
+  color: #777;
+}
+
+.sidebar-menu {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sidebar-menu li {
+  margin-bottom: 10px;
+}
+
+.sidebar-menu a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+}
+
+.sidebar-menu a:hover {
+  color: #1da1f2; /* Twitter blue */
+}
+
+/* .tweet-button {
+  background-color: #1da1f2; 
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  padding: 10px 20px;
+  font-weight: bold;
+  font-size: 1.1rem;
+  cursor: pointer;
+  margin-top: 20px;
+} */
+
+/* .tweet-button:hover {
+  background-color: #0a86d4; 
+  color: #fff;
+} */
+
+
+
+/* Tweet Styles */
+/* Add this to hide the tweet form initially */
+.hidden {
+  display: none;
+}
+
+#tweets {
+  margin-left: 5%; /* To account for the width of the sidebar */
+  padding: 20px;
+}
+
+.tweet {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 40px;
+}
+
+.tweet-user {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.tweet-user img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.user-info h3 {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.user-info p {
+  margin: 0;
+  color: #777;
+}
+
+.tweet-content {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.tweet-actions button {
+  background-color: transparent;
+  border: none;
+  color: #333;
+  font-weight: bold;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.like-button {
+  color: #e0245e; /* Twitter red for likes */
+}
+
+.retweet-button {
+  color: #17bf63; /* Twitter green for retweets */
+}
+
+
+#main{
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  overflow-x: hidden;
+}
+
+#main-content{
+  width: 70vw;
+  height: 100vh;
+
+  position: relative;
+  left: 25vw;
+  /* position: relative; */
+
+}
+
+/* Header Styles */
+header {
+
+  background-color: #1da1f2; /* Twitter blue */
+  color: #fff;
+  padding: 20px 15px;
+  border-radius: 10px;
+}
+
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 10px;
+}
+
+.logo img {
+  width: 30px;
+  height: 30px;
+}
+
+.search-bar input {
+  width: 300px;
+  padding: 10px;
+  border: none;
+  border-radius: 25px;
+  font-size: 1rem;
+}
+
+.user-actions {
+  display: flex;
+  align-items: center;
+}
+
+.tweet-button {
+  background-color: #fff;
+  color: #1da1f2; /* Twitter blue */
+  border: none;
+  border-radius: 25px;
+  padding: 10px 20px;
+  font-weight: bold;
+  font-size: 1rem;
+  margin-right: 10px;
+  cursor: pointer;
+  
+}
+
+.logout-button {
+  background-color: #fff;
+  color: #080808; /* Twitter blue */
+  border: none;
+  border-radius: 25px;
+  padding: 10px 20px;
+  font-weight: bold;
+  font-size: 1rem;
+  margin-right: 10px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.user-dropdown {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.user-dropdown img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+
+.user-dropdown span {
+  font-weight: bold;
+  font-size: 1rem;
+  margin-right: 5px;
+}
+
+.user-dropdown i {
+  color: #fff;
+  font-size: 1rem;
+}
+
+
+/* Footer Styles */
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px 0;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-menu {
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+}
+
+.footer-menu li {
+  margin-right: 15px;
+  margin-bottom: 10px;
+}
+
+.footer-menu a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 0.9rem;
+}
+
+.copyright {
+  font-size: 0.8rem;
 }

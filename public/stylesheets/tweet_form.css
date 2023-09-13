@@ -1,0 +1,80 @@
+/* Reset some default styles */
+body, h1, h2, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Header Styles */
+header {
+    background-color: #1da1f2; /* Twitter blue */
+    color: #fff;
+    padding: 10px;
+}
+
+.user-profile {
+    display: flex;
+    align-items: center;
+}
+
+.user-profile img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.user-profile h2 {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.user-profile p {
+    font-size: 0.9rem;
+    color: #777;
+}
+
+/* Main Content Styles */
+main {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.tweet-form {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+#tweet-content {
+    width: 100%;
+    border: none;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+#tweet-image {
+    width: 100%;
+    border: none;
+    margin-bottom: 10px;
+}
+
+#tweet-button {
+    background-color: #1da1f2;
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    padding: 10px 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.tweets {
+    /* Styles for displaying tweets will go here */
+}

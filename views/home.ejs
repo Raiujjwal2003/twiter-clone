@@ -3,13 +3,109 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Twitter Clone</title>
+    <link rel="stylesheet" href="../stylesheets/style.css">
+    <style>
+        /* Your CSS styles here */
+    </style>
 </head>
 <body>
-    
-   <!-- Assuming you're using EJS syntax -->
-<h1>Welcome <%= user.name %></h1>
-<!-- Display other user details as needed -->
+<div id="main">
+    <div id="sidebar">
+        <!-- Sidebar content here -->
+        
+            <div class="user-profile">
+                <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="User Profile Image">
+                <h2> <%= user.name %></h2>
+                <p> <%= user.username %></p>
+            </div>
+            <ul class="sidebar-menu">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Explore</a></li>
+                <li><a href="#">Notifications</a></li>
+                <li><a href="#">Messages</a></li>
+                <!-- Add more menu items as needed -->
+            </ul>
+            <button class="tweet-button"><a href="/profile/<%= user.username %>/tweet">Tweet</a></button>
+            <button class="logout-button"><a href="/profile/<%= user.username %>/tweet">Logout</a></button>
+        
+        
+    </div>
+    <div id="main-content">
+       
+            <!-- Header content here -->
+
+<header>
+    <div class="header-container">
+        <div class="logo">
+            <img src="https://about.twitter.com/content/dam/about-twitter/x/brand-toolkit/logo-black.png.twimg.1920.png" alt="Twitter Logo">
+        </div>
+        <div class="search-bar">
+            <input type="text" placeholder="Search Twitter">
+        </div>
+        <div class="user-actions">
+            <button class="tweet-button"><a href="/profile/<%= user.username %>/tweet">Tweet</a></button>
+            <div class="user-dropdown">
+                <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="User Profile Image">
+                <!-- <img src="" alt="User Avatar"> -->
+                <span><%= user.username %></span>
+                <i class="fas fa-caret-down"></i>
+                <!-- Add user dropdown menu here -->
+            </div>
+        </div>
+    </div>
+</header>
+
+        
+       
+            <!-- Tweets and interactions here -->
+            <div id="tweets">
+                <!-- <div class="tweet">
+                    <div class="tweet-user">
+                        <img src="user1-avatar.jpg" alt="User 1 Avatar">
+                        <div class="user-info">
+                            <h3>User 1</h3>
+                            <p>@user1</p>
+                        </div>
+                    </div>
+                    <p class="tweet-content">This is a sample tweet. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <div class="tweet-actions">
+                        <button class="like-button">Like</button>
+                        <button class="retweet-button">Retweet</button>
+                    </div>
+                </div> -->
+                <!-- <div class="tweet">
+                    <div class="tweet-user">
+                        <img src="user1-avatar.jpg" alt="User 1 Avatar">
+                        <div class="user-info">
+                            <h3>User 1</h3>
+                            <p>@user1</p>
+                        </div>
+                    </div>
+                    <p class="tweet-content">This is a sample tweet. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <div class="tweet-actions">
+                        <button class="like-button">Like</button>
+                        <button class="retweet-button">Retweet</button>
+                    </div>
+                </div> -->
+            
+                <!-- Add more tweets as needed -->
+            </div>
+            
+       
+      
+            <!-- Footer content here -->
+<!-- 
+            <footer>
+              
+            </footer> -->
+            
+      
+    </div>
+</div>
+
+    <script src="..javascripts/script.js"></script>
+
 
 </body>
 </html>
