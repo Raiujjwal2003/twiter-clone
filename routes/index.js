@@ -61,25 +61,25 @@ router.post('/register_user', function (req, res) {
 
 
 
-router.get('/profile/:username/tweet',isLoggedIn, function(req, res, next) {
+router.get('/profile/:username/tweet', function(req, res, next) {
   if (req.isAuthenticated() && req.user) {
-    const user = req.user; // Assuming your user details are stored in req.user
+    const user = req.user; 
     res.render('tweet_form', { title: 'tweet', user: user });
   }
 });
 
 router.get('/profile', isLoggedIn, function(req, res, next) {
-  // Access the logged-in user's username from your user data (e.g., req.user)
-  const username = req.user.username; // Modify this based on your user data structure
+ 
+  const username = req.user.username; 
 
   // Redirect to the URL with the username
   res.redirect(`/profile/${username}`);
 });
 
 router.get('/profile/:username', isLoggedIn, function(req, res, next) {
-  // Check if the user is logged in and the user object exists
+  // Check if the user is logged in 
   if (req.isAuthenticated() && req.user) {
-    const user = req.user; // Assuming your user details are stored in req.user
+    const user = req.user; 
     res.render('home', { title: 'Home', user: user });
   }
    else {
