@@ -54,12 +54,12 @@ p {
 }
 
 a {
-  color: #007BFF;
+  color: #ffffff;
   text-decoration: none;
 }
 
 a:hover {
-  text-decoration: underline;
+  /* text-decoration: underline; */
   color: #fff;
 }
 
@@ -101,7 +101,14 @@ a:hover {
 }
 
 .sidebar-menu li {
+
   margin-bottom: 10px;
+  border: 1px solid black;
+  padding: 5px 10px;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .sidebar-menu a {
@@ -228,7 +235,9 @@ header {
   padding: 20px 15px;
   border-radius: 10px;
 }
-
+.sidebar-menu li {
+  margin-bottom: 10px;
+}
 .header-container {
   max-width: 1200px;
   margin: 0 auto;
@@ -236,6 +245,26 @@ header {
   align-items: center;
   justify-content: space-between;
   border-radius: 10px;
+}
+
+@media (max-width:500px) {
+  .header-container {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 10px;
+  }
+
+  .search-bar input {
+    width: 80px;
+    padding: 10px;
+    border: none;
+    border-radius: 25px;
+    font-size: 1rem;
+  }
+  
 }
 
 .logo img {
@@ -257,7 +286,7 @@ header {
 }
 
 .tweet-button {
-  background-color: #fff;
+  background-color: #1da1f2;
   color: #1da1f2; /* Twitter blue */
   border: none;
   border-radius: 25px;
@@ -270,7 +299,7 @@ header {
 }
 
 .logout-button {
-  background-color: #fff;
+  background-color: #444;
   color: #080808; /* Twitter blue */
   border: none;
   border-radius: 25px;

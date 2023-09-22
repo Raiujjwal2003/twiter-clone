@@ -11,50 +11,31 @@
 </head>
 <body>
 <div id="main">
-    <div id="sidebar">
-        <!-- Sidebar content here -->
-        
-            <div class="user-profile">
-                <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="User Profile Image">
-                <h2> <%= user.name %></h2>
-                <p> <%= user.username %></p>
-            </div>
-            <ul class="sidebar-menu">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Explore</a></li>
-                <li><a href="#">Notifications</a></li>
-                <li><a href="#">Messages</a></li>
-                <!-- Add more menu items as needed -->
-            </ul>
-            <button class="tweet-button"><a href="/profile/<%= user.username %>/tweet">Tweet</a></button>
-            <button class="logout-button"><a href="/profile/<%= user.username %>/tweet">Logout</a></button>
-        
-        
-    </div>
+    <%- include('sidebar.ejs') %>
     <div id="main-content">
        
             <!-- Header content here -->
 
-<header>
-    <div class="header-container">
-        <div class="logo">
-            <img src="https://about.twitter.com/content/dam/about-twitter/x/brand-toolkit/logo-black.png.twimg.1920.png" alt="Twitter Logo">
-        </div>
-        <div class="search-bar">
-            <input type="text" placeholder="Search Twitter">
-        </div>
-        <div class="user-actions">
-            <button class="tweet-button"><a href="/profile/<%= user.username %>/tweet">Tweet</a></button>
-            <div class="user-dropdown">
-                <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="User Profile Image">
-                <!-- <img src="" alt="User Avatar"> -->
-                <span><%= user.username %></span>
-                <i class="fas fa-caret-down"></i>
-                <!-- Add user dropdown menu here -->
-            </div>
-        </div>
-    </div>
-</header>
+            <header>
+                <div class="header-container">
+                    <div class="logo">
+                        <img src="https://about.twitter.com/content/dam/about-twitter/x/brand-toolkit/logo-black.png.twimg.1920.png" alt="Twitter Logo">
+                    </div>
+                    <div class="search-bar">
+                        <input type="text" placeholder="Search Twitter">
+                    </div>
+                    <div class="user-actions">
+                        <button class="tweet-button"><a href="/profile/<%= user.username %>/tweet">Tweet</a></button>
+                        <div class="user-dropdown">
+                            <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="User Profile Image">
+                            <!-- <img src="" alt="User Avatar"> -->
+                            <span><%= user.username %></span>
+                            <i class="fas fa-caret-down"></i>
+                            <!-- Add user dropdown menu here -->
+                        </div>
+                    </div>
+                </div>
+            </header>
 
         
        
