@@ -37,8 +37,87 @@
                 </div>
             </header>
 
-        
+        <!-- views/index.ejs -->
+
+<!-- Your existing HTML content -->
+
+<!-- Popup HTML -->
+<!-- views/index.ejs -->
+
+<!-- Your existing HTML content -->
+
+<!-- Popup HTML -->
+<div class="popup" id="popup">
+    <div class="popup-content">
+      <span class="close" id="closePopup">&times;</span>
+      <p id="popupMessage">This is a popup message.</p>
+    </div>
+  </div>
+  
+  <!-- CSS for Popup Styling -->
+  <style>
+    .popup {
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: white;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
+      z-index: 1000;
+    }
+  
+    .popup-content {
+      text-align: center;
+    }
+  
+    .close {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      cursor: pointer;
+    }
+  </style>
+  
+  
        
+<<!-- JavaScript for Popup -->
+<script>
+    const popup = document.getElementById('popup');
+    const closePopupButton = document.getElementById('closePopup');
+    const popupMessage = document.getElementById('popupMessage');
+    const showPopupButton = document.getElementById('showPopupButton'); // Add this line
+  
+    // Function to show the popup message
+    function showPopup(message) {
+      popupMessage.textContent = message;
+      popup.style.display = 'block';
+    }
+  
+    // Function to hide the popup message
+    function hidePopup() {
+      popup.style.display = 'none';
+    }
+  
+    closePopupButton.addEventListener('click', hidePopup);
+  
+    // Close the popup if the user clicks outside of it
+    window.addEventListener('click', (event) => {
+      if (event.target === popup) {
+        hidePopup();
+      }
+    });
+  
+    // Add a click event listener to the button
+    showPopupButton.addEventListener('click', () => {
+      showPopup('Hello, this is a popup!');
+    });
+  </script>
+  
+  
+
             <!-- Tweets and interactions here -->
             <div id="tweets">
                 <!-- <div class="tweet">

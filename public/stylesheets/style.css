@@ -96,6 +96,7 @@ a:hover {
 }
 
 .sidebar-menu {
+  
   list-style-type: none;
   padding: 0;
 }
@@ -103,12 +104,10 @@ a:hover {
 .sidebar-menu li {
 
   margin-bottom: 10px;
-  border: 1px solid black;
+  
   padding: 5px 10px;
   border-radius: 50px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+ 
 }
 
 .sidebar-menu a {
