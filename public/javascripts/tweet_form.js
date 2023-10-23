@@ -1,42 +1,26 @@
-// JavaScript code for tweet submission (you'll need to implement the backend)
-document.addEventListener('DOMContentLoaded', () => {
-    const tweetButton = document.getElementById('tweet-button');
+document.addEventListener('DOMContentLoaded', function() {
     const tweetContent = document.getElementById('tweet-content');
-    const tweetImage = document.getElementById('tweet-image');
-    const tweetsContainer = document.querySelector('.tweets');
-
-    tweetButton.addEventListener('click', () => {
-        const content = tweetContent.value;
-        const imageFile = tweetImage.files[0]; // Get the selected image file
-
-        // You can send the tweet content and image to your backend for processing and storage
-        // You'll need to implement the backend part
-
-        // For demonstration purposes, let's create a tweet element and display it
-        const tweetElement = createTweetElement(content, imageFile);
-        tweetsContainer.appendChild(tweetElement);
-
-        // Clear the tweet form
-        tweetContent.value = '';
-        tweetImage.value = '';
-    });
-
-    function createTweetElement(content, imageFile) {
-        const tweetDiv = document.createElement('div');
-        tweetDiv.classList.add('tweet');
-
-        // Create and append elements for tweet content and image
-        const tweetContent = document.createElement('p');
-        tweetContent.textContent = content;
-        tweetDiv.appendChild(tweetContent);
-
-        if (imageFile) {
-            const tweetImage = document.createElement('img');
-            tweetImage.src = URL.createObjectURL(imageFile);
-            tweetImage.alt = 'Tweet Image';
-            tweetDiv.appendChild(tweetImage);
+    const charCount = document.getElementById('char-count');
+    const tweetbtn = document.getElementById('tweet-btn');
+    
+    tweetContent.addEventListener('input', function() {
+        const remainingChars = 140 - tweetContent.value.length;
+        charCount.textContent = remainingChars;
+        
+        if (remainingChars >= 0 && remainingChars < 140) {
+            tweetbtn.disabled = false;
+        } else {
+            tweetbtn.disabled = true;
         }
-
-        return tweetDiv;
-    }
+    });
+    
+    tweetbtn.addEventListener('click', function() {
+        const tweetText = tweetContent.value;
+        // Send the tweet to the server or perform other actions as needed.
+        // This is a simplified example, and you would typically make an AJAX request here.
+        console.log('Tweet:', tweetText);
+        tweetContent.value = '';
+        charCount.textContent = '140';
+        tweetbtn.disabled = true;
+    });
 });

@@ -61,9 +61,16 @@ router.post('/register_user', function (req, res) {
 
 
 
-router.get('/profile/:username/tweet', function(req, res, next) {
+router.get('/profile/tweet', function(req, res, next) {
   if (req.isAuthenticated() && req.user) {
     const user = req.user; 
+    res.render('tweet_form', { title: 'tweet', user: user });
+  }
+});
+
+router.get('/tweet_submit', function(req, res, next) {
+  if (req.isAuthenticated() && req.user) {
+
     res.render('tweet_form', { title: 'tweet', user: user });
   }
 });

@@ -1,39 +1,55 @@
-<div id="sidebar">
-    <div class="user-profile">
-<img src="profile-image.jpg" alt="User Profile Image">
-<h2>User Name</h2>
-    <p>@username</p>
-    </div>
-    <ul class="sidebar-menu">
-    <li><a href="#">Home</a></li>
-        <li><a href="#">Explore</a></li>
-        <li><a href="#">Notifications</a></li>
-        <li><a href="#">Messages</a></li>
-        <!-- Add more menu items as needed -->
-    </ul>
-    <button class="tweet-button" id="tweet-button">Tweet</button>
-    <div id="tweet-form" class="hidden">
-        <div class="user-profile">
-            <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="User Profile Image">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Twitter Clone</title>
+    <link rel="stylesheet" href="../stylesheets/style.css">
+    <link rel="stylesheet" href="../stylesheets/tweet_form.css">
+    <style>
+        /* Your CSS styles here */
+    </style>
+</head>
+<body>
+<div id="main">
+    <%- include('sidebar.ejs') %>
+    <div id="main-content">
+       
+            <!-- Header content here -->
 
-            <!-- <img src="profile-image.jpg" alt="User Profile Image"> -->
-            <h2><%= user.name %></h2>
-            <p><%= user.username %></p>
-        </div>
-    </header>
     
-    <main>
-        <div class="tweet-form">
-            <textarea id="tweet-content" placeholder="What's happening?"></textarea>
-            <input type="file" id="tweet-image" accept="image/*">
-            <button id="tweet-button">Tweet</button>
-        </div>
-        
-        <div class="tweets">
-            <!-- Tweets will be displayed here -->
-        </div>
-    </main>
 
+            <div class="tweet-form-container">
+                <div class="user-profile">
+                    <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="User Profile Image">
+                    <h2><%- user.name %></h2>
+                    <p><%- user.username %></p>
+                </div>
+                <div class="tweet-form">
+                    <form action="/Tweet_submit">
+                        <textarea id="tweet-content" placeholder="What's happening?"></textarea>
+                    <div class="tweet-controls">
+                        <!-- <label for="tweet-image" class="image-upload-button">Add Image</label>
+                        <input type="file" id="tweet-image" accept="image/*">
+                        <span id="char-count">140</span> -->
+                         
+                       
+                        
+                    </div>
+                    </form>
+                </div>
+            </div>
+        
+            <div class="tweets">
+                <!-- Tweets will be displayed here -->
+            </div>
+
+    </div>
+</div>
+
+    <script src="..javascripts/script.js"></script>
     <script src="../javascripts/tweet_form.js"></script>
+
+
 </body>
 </html>

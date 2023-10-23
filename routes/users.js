@@ -8,12 +8,15 @@ mongoose.connect("mongodb://localhost/twiter_user")
 .then(function(){
   console.log("database se conncet ho gayaa hui hui huii...");
 })
+.catch(err => console.error('COuld not connect to mongodb...',err));
+
 
 var userSchema = mongoose.Schema({
   name:String,
   username:String,
   email:String,
   password: String,
+  tweet:String
  
 })
 userSchema.plugin(plm)
